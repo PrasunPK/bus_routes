@@ -1,0 +1,22 @@
+{
+  "name": "bus_routes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "routes.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Prasun",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "fs": "0.0.2"
+  }
+}
