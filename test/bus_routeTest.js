@@ -19,6 +19,19 @@ describe('findBusesPassesThrough',function(){
           var buses = r.findBusesPassesThrough('HOSKEREHALLI CR');
           assert.deepEqual(buses,['13E']);
       });
+});
 
 
+describe('findDirectBusesBetween',function(){
+    var r = new Route();
+    r.createRoute(rawRoute.join('\n'));
+      it('finds the direct buses between two stations',function(){
+          var buses = r.findDirectBusesBetween('MONO TYPE','BANGALORE CLUB');
+          assert.deepEqual(buses, ['13C','13D','13E','13F']);
+          var buses = r.findDirectBusesBetween('KUMARASWAMY LAYOUT','BANGALORE CLUB');
+          assert.deepEqual(buses, ['13C']);
+          var buses = r.findDirectBusesBetween('KADIRENAHALLI PARK','WILSON GARDEN POLICE STN.');
+          assert.deepEqual(buses, ['13D','13E']);
+
+      });
 });
